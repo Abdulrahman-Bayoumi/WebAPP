@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\الشغل\\WebAPP\\WebApp1\\WebApp1\\WebApp1.csproj": {}
+    "D:\\الشغل\\WebAPP\\WebApp1\\WebApp1.csproj": {}
   },
   "projects": {
-    "D:\\الشغل\\WebAPP\\WebApp1\\WebApp1\\WebApp1.csproj": {
+    "D:\\الشغل\\WebAPP\\WebApp1\\WebApp1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\الشغل\\WebAPP\\WebApp1\\WebApp1\\WebApp1.csproj",
+        "projectUniqueName": "D:\\الشغل\\WebAPP\\WebApp1\\WebApp1.csproj",
         "projectName": "WebApp1",
-        "projectPath": "D:\\الشغل\\WebAPP\\WebApp1\\WebApp1\\WebApp1.csproj",
+        "projectPath": "D:\\الشغل\\WebAPP\\WebApp1\\WebApp1.csproj",
         "packagesPath": "C:\\Users\\Abd-ElRahman\\.nuget\\packages\\",
-        "outputPath": "D:\\الشغل\\WebAPP\\WebApp1\\WebApp1\\obj\\",
+        "outputPath": "D:\\الشغل\\WebAPP\\WebApp1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Abd-ElRahman\\AppData\\Roaming\\NuGet\\NuGet.Config",
