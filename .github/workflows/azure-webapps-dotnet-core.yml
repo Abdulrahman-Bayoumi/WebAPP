@@ -46,21 +46,19 @@ jobs:
           name: .net-app
           path: ${{env.DOTNET_ROOT}}/myapp
 
-  deploy:
-    name: Deploy 🚀
-    needs: build
-    runs-on: ubuntu-latest
-    steps: 
-      - name: Checkout repository
-        uses: actions/checkout@main
-      - name: Download artifact
-        uses: actions/download-artifact@main
-        with: 
-          name: dist
-          path: dist
-      - name: Sync files to hosting
-        uses: SamKirkland/FTP-Deploy-Action@4.0.0
-        with: 
-          server: 194.37.80.39
-          username: ABayoumi
-          password: ${{ secrets.ftp_password }}
+on: push
+name: 🚀 Deploy website on push
+jobs:
+     web-deploy:
+       name: 🎉 Deploy
+       runs-on: ubuntu-latest
+       steps:
+        - name: 🚚 Get latest code
+          uses: actions/checkout@v2
+    
+        - name: 📂 Sync files
+          uses: SamKirkland/FTP-Deploy-Action@4.3.3
+          with:
+             server: 194.37.80.39
+             username: ABayoumi
+             password: ${{ secrets.ftp_password }}
