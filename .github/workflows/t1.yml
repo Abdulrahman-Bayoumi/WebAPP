@@ -32,13 +32,14 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+    - name: published
+      run: dotnet publish -c Release
     - name: 🚚 Get latest code
       uses: actions/checkout@v2
 
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.3
-    - name: published
-      run: dotnet.exe publish --configuration Release --output WebAPIFolder
+
        
       with:
         server: 194.37.80.39
