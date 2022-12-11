@@ -40,9 +40,9 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.3
       with:
-        server: ftp.samkirkland.com
-        username: myFtpUserName
-        password: ${{ secrets.ftp_password }}
+        server: 194.37.80.39
+        username: ABayoumi
+        password: g+3A5auF#7zeKmXe
 
 
 
