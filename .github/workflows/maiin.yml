@@ -30,6 +30,6 @@ jobs:
       uses: garygrossgarten/github-action-ssh@v0.3.0
       with:
         command: sudo service deferat start
-        host: ${{ secrets.REMOTE_HOST }}
-        username: ${{ secrets.REMOTE_USER }}
-        privateKey: ${{ secrets.REMOTE_SSH_KEY }}
+        host: ${{ secrets.FTP_HOSTNAME }}
+        username: ${{ secrets.FTP_USERNAME }}
+        privateKey: ${{ secrets.FTP_PASSWORD }}
