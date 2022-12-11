@@ -8,18 +8,8 @@ jobs:
     - name: 🚚 Get latest code
       uses: actions/checkout@v2
 
-    - name: Use Node.js 12
-      uses: actions/setup-node@v2-beta
-      with:
-        node-version: '12'
-      
-    - name: 🔨 Build Project
-      run: |
-        npm install
-        npm run build
-    
     - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@4.1.0
+      uses: Penguibird/FTP-Deploy-Action@4.2.0
       with:
         server: 194.37.80.39
         username: ABayoumi
