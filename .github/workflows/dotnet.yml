@@ -1,7 +1,7 @@
 on:
   push:
     paths:
-      - 'dist/*'
+      - 'dist/*' 
 name: FTP Deploy
 jobs:
   FTP-Deploy-Action:
