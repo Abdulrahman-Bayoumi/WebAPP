@@ -32,7 +32,7 @@ jobs:
 
     steps:
     - name: published 
-      run: dotnet publish D:\الشغل\WebAPP\WebAPP1.sln --configuration Release
+      run: dotnet publish D:\\الشغل\\WebAPP\\WebAPP1.sln --configuration Release
 
     - name: 🚚 Get latest code
       uses: actions/checkout@v2
