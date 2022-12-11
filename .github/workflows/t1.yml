@@ -32,7 +32,7 @@ jobs:
 
     steps:
     - name: published 
-      run: dotnet publish WebAPP --configuration Release
+      run: dotnet publish WebAPP1 --configuration Release
 
     - name: 🚚 Get latest code
       uses: actions/checkout@v2
