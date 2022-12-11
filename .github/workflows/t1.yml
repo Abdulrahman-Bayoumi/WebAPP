@@ -26,26 +26,24 @@ jobs:
       run: dotnet build --no-restore
     - name: Test
       run: dotnet test --no-build --verbosity normal
-      
-image: mcr.microsoft.com/dotnet/core/sdk:3.1
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
 
-pipelines:
-    branches:
-        master:
-            - step:
-                caches:
-                    - dotnetcore
-                script:
-                    - export PROJECT_NAME=WebApplication
-                    - dotnet restore
-                    - dotnet build $PROJECT_NAME
-                    - pipe: atlassian/ftp-deploy:0.3.1
-                        variables:
-                             USER: ABayoumi
-                             PASSWORD: g+3A5auF#7zeKmXe
-                             SERVER: 194.37.80.39
-                             REMOTE_PATH: $PROD_PATH
-                             LOCAL_PATH: $BUILD_PATH
-       
+    steps:
+    - name: published 
+      run: dotnet publish --configuration Release
+
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v2
+    
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@4.3.3
+      with:
+        server: ftp.samkirkland.com
+        username: myFtpUserName
+        password: ${{ secrets.ftp_password }}
+
+
 
 
