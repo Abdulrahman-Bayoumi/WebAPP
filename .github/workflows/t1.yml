@@ -33,7 +33,7 @@ jobs:
 
     steps:
     - name: publish
-      run: dotnet publish --configuration Release -o ${{env.DOTNET_ROOT}}/WebAPP
+      run: dotnet publish ${{env.DOTNET_ROOT}}/WebAPP.sln --configuration Release -o 
     - name: 🚚 Get latest code
       uses: actions/checkout@v2
     
