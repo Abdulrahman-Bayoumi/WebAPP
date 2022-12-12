@@ -33,7 +33,7 @@ jobs:
     steps:
     - name: publish
       run: |
-        cd Abdulrahman-Bayoumi.WebAPP
+        cd WebAPP
         dotnet publish --configuration Release
     - name: 🚚 Get latest code
       uses: actions/checkout@v2
