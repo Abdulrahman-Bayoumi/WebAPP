@@ -32,7 +32,7 @@ jobs:
 
     steps:
     - name: publish
-      run:
+      run: |
         cd WebAPP
         dotnet publish WebApp1.sln --configuration Release
     - name: 🚚 Get latest code
