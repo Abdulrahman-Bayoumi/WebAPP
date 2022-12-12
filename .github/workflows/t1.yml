@@ -31,8 +31,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: published 
-      run: dotnet publish ./WebAPP//WebApp1.sln --configuration Release
+    - name: publish
+      run:
+        cd WebAPP
+        dotnet publish WebApp1.sln --configuration Release
     - name: 🚚 Get latest code
       uses: actions/checkout@v2
     
